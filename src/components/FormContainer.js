@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 
-function FormContainer({ blogsAPI, blogs, setBlogs }) {
+function FormContainer({ blogsAPI }) {
 
-    const [newBlogData, setNewBlogData] = useState({})
+    const [newBlogData, setNewBlogData] = useState([])
 
     // fetch(blogsAPI, {
     //     method: "POST", 
@@ -13,7 +13,7 @@ function FormContainer({ blogsAPI, blogs, setBlogs }) {
     //     })
     //     .then((r) => r.json())
     //     .then((newBlogData) => {
-    //         setBlogs(...blogs, newBlogData)
+    //         setNewBlogData(newBlogData)
     //     } 
     //   );
 

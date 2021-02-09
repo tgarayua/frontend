@@ -3,7 +3,7 @@ import BlogItem from "./BlogItem"
 
 function BlogContainer( { blogsAPI} ) {
 
-    const [blogs, setBlogs] = useState([])
+    const [blogs, setBlogs] = useState()
 
     
 
@@ -17,12 +17,12 @@ function BlogContainer( { blogsAPI} ) {
 
     console.log(blogs)
 
+    if (!blogs) {
+        return "Loading..."
+    }
+    
 
-
-    // if (blogs === [])
-    // return "Loading..."
-
-    const blogsList = blogs.map((blog) => {
+    const blogsList = blogs?.map((blog) => {
         return <BlogItem key={blog.id} 
         title={blog.title} 
         content={blog.content} 
